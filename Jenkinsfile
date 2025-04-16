@@ -16,8 +16,8 @@ pipeline {
                     npm ci
                     npm run build
                     ls -la
-                    sudo rm -rf /var/www/html
-                    sudo cp -ra /dist/* /var/www/html
+                    rm -rf /var/www/html
+                    cp -ra /dist/* /var/www/html
                 '''
             }
         }
