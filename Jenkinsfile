@@ -9,17 +9,16 @@ pipeline {
                 }
             }
             steps {
-                cleanWs()
-                // sh '''
-                //     ls -la
-                //     node --version
-                //     npm --version
-                //     npm ci
-                //     npm run build
-                //     ls -la
-                //     rm -rf /var/www/html/
-                //     cp -ra dist/* /var/www/html/
-                // '''
+                sh '''
+                    ls -la
+                    node --version
+                    npm --version
+                    npm ci
+                    npm run build
+                    ls -la
+                    rm -rf /var/www/html/
+                    cp -ra dist/* /var/www/html/
+                '''
             }
         }
     }
