@@ -27,7 +27,10 @@ pipeline {
             }
             steps {
                 echo 'Test  stage'
-                sh 'test dist/index.html'
+                sh '''
+                    test dist/index.html
+                    npm run test
+                '''
             }
         }
     }
