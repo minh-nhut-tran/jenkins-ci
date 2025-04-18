@@ -43,7 +43,7 @@ pipeline {
                 echo 'Test  E2E'
                 sh '''
                     npm install serve
-                    serve -s dist
+                    node_modules/.bin/serve -s dist
                     npx playwright test
                 '''
             }
