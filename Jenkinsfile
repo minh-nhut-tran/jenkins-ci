@@ -41,6 +41,7 @@ pipeline {
             }
             steps {
                 echo 'Test  E2E'
+                echo 'Small changes'
                 sh '''
                     npm install serve
                     node_modules/.bin/serve -s dist & sleep 10
